@@ -144,13 +144,13 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
-			if (controls.UP_P)
+			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(-1);
 			}
 
-			if (controls.DOWN_P)
+			if (controls.UI_DOWN_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				changeItem(1);
@@ -163,6 +163,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
+				
+                      addTouchPad("UP_DOWN", "A_B_E");
+				
 				if (optionShit[curSelected] == 'donate')
 				{
 					fancyOpenURL("https://www.kickstarter.com/projects/funkin/friday-night-funkin-the-full-ass-game");
